@@ -1,0 +1,28 @@
+{% extends 'basic.html' %}
+
+{% block title %}Top Songs{% endblock %}
+
+{% block body %}
+
+<div style="display: flex; flex-wrap: wrap; justify-content:start; align-items:self-start; min-height: 100vh; background-color: #f8f9fa; padding: 20px;">
+    {% for i in topsong %}
+    <div class="card mb-3 pt-4 ps-4 pe-4" style="max-width: 540px; border: 2px solid blue; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/media/{{ i.image }}" class="img-fluid rounded-start" alt="{{ i.name }}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ i.name }}</h5>
+                    <p class="card-text">{{ i.tags }}</p>
+                    <button class="btn btn-outline-success" style="margin-top: 1vh; background-color: rgb(41, 10, 93); color: white;">
+                        <a href="/topsongs/{{ i.song_id }}" style="text-decoration: none; color: white;">Listen Song</a>
+                    </button>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

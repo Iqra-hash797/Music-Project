@@ -1,0 +1,40 @@
+{% extends 'basic.html' %}
+
+{% block title %}Song Post{% endblock %}
+
+{% block body %}
+<div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f8f9fa;">
+    <div class="card mb-3 pt-4 ps-4 pe-4" style="max-width: 540px; border: 2px solid rgb(24, 24, 199); border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/media/{{ song.image }}" class="img-fluid rounded-start" alt="{{ song.name }}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Title: {{ song.name }}</h5>
+                    <h3 class="card-title">Singer: {{ song.singer }}</h3>
+                    <h2 class="card-title">Movie: {{ song.movie }}</h2>
+                    <p class="card-text">Description: {{ song.tags }}</p>
+
+                    <!-- Updated audio player -->
+                    <audio controls style="width: 100%; margin-top: 10px;">
+                        <source src="/media/{{ song.song }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <!-- Download button -->
+                    <a href="/media/{{ song.song }}" download class="btn btn-primary mt-3">Download Song</a>
+
+                    <!-- rating button -->
+
+                    
+                
+                    
+                    <p class="card-text mt-2"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
