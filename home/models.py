@@ -37,3 +37,4 @@ class Topsongs(models.Model):
     def __str__(self):
         return self.name
 
+# hello this are models
