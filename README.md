@@ -1,1 +1,3 @@
+Music WebApp
+<br>
 Created an intuitive and feature-rich web application where users can stream and download music and explore trending tracks. Integrated advanced search capabilities, user authentication, and a sleek, responsive UI to deliver an immersive music experience.
