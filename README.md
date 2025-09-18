@@ -1,4 +1,2 @@
 # Music-Project
-Hello This my music project
-<br>
-This is the 2nd project that I had built using python and Django
+Created an intuitive and feature-rich web application where users can stream and download music and explore trending tracks. Integrated advanced search capabilities, user authentication, and a sleek, responsive UI to deliver an immersive music experience.
